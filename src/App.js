@@ -1,23 +1,79 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import MainImg from './components/MainImg';
+import MainContext from './components/MainContext';
+import Footer from './components/Footer';
+import Register from './components/Register'
+import Login from './components/Login';
+import Message from './components/Message';
+import Board from './components/Board';
+import BoardList from './components/BoardList';
+import BoardBox from './components/BoardBox';
+import {createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import BoardListContent from './components/BoardListContent';
+
+const Layout = () => {
+  return (
+    <>
+    <Header/>
+    <Nav/>
+    <MainImg/>
+    <Outlet/>
+    <Footer/>
+    </>
+  )
+}
+
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element: <Layout/>,
+    children: [
+      {
+        path:'/',
+        element: <MainContext/>
+      },
+      {
+        path:'/login',
+        element: <Login/>
+      },
+      {
+        path:'/register',
+        element: <Register/>
+      },
+      {
+        path:'/message',
+        element: <Message/>
+      },
+      {
+        path: '/board',
+        element: <Board/>
+      },
+      {
+        path: '/boardlist/:page',
+        element: <BoardList/>
+      },
+      {
+        path: '/boardlist/:page/:num',
+        element: <BoardBox/>
+      },
+      
+    ]
+  }
+])
+
+
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <RouterProvider router={router}/>
     </div>
   );
 }
