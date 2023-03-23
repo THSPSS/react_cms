@@ -28,7 +28,7 @@ function BoardBox(props) {
   const handleDelete = async () => {
     try {
       await axios.delete(`${BASE_PATH}/board/${list_num}`);
-      navigate("/");
+      navigate("/board");
     } catch (err) {
       console.log(err);
     }
