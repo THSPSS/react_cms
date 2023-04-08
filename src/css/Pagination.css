@@ -1,0 +1,20 @@
+#board_box > #page_num > .pagination > .disabled {
+  display: none;
+}
+#board_box > #page_num > .pagination {
+  font-size: 16px;
+  padding: 6px;
+}
+
+#board_box > #page_num > .pagination > .active {
+  font-weight: 500;
+  background-color: lightblue;
+  color: white;
+}
+
+#board_box > #page_num > .pagination > li {
+  border: 1px solid black;
+  padding: 6px;
+  background-color: aliceblue;
+  margin-inline-end: 2px;
+}

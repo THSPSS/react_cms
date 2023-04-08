@@ -6,6 +6,7 @@ import { useQuery } from "react-query";
 import { AuthContext } from "../context/authoContext";
 import List from "./List";
 import Pagination from "react-js-pagination";
+import "../css/Pagination.css";
 
 function BoardList() {
   const limit = 5;

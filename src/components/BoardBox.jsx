@@ -47,7 +47,7 @@ function BoardBox(props) {
               </span>
               <span className="col2">
                 {" "}
-                {board.name}| {board.regist_day}{" "}
+                {board.name} | {board.regist_day}{" "}
               </span>
             </li>
             <li>

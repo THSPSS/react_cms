@@ -1,7 +1,7 @@
 import React from "react";
 import BoardListContent from "./BoardListContent";
 
-function list(props) {
+function List(props) {
   let result;
   if (props.data === "") {
     const a = [...new Array(props.limit)].map((_, i) => i + 1);
@@ -37,4 +37,4 @@ function list(props) {
   return <>{result}</>;
 }
 
-export default list;
+export default List;
