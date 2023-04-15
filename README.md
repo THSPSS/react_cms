@@ -7,4 +7,4 @@
    -React 
 
 # clone
-git clone https://github.com/THSPSS/cms_practice.git
+git clone https://github.com/THSPSS/react_cms.git
